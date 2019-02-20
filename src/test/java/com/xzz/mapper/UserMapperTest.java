@@ -56,6 +56,14 @@ public class UserMapperTest {
     public void delUserTest() {
         mapper.delUser(7);
     }
+    @Test
+    public void updateUserTest() throws ParseException {
+        String birthdayStr = "2008-08-08";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date birthday = sdf.parse(birthdayStr);
+        User user = new User(7, "Jerry", birthday, "女", "北京");
+        mapper.updateUser(user);
+    }
 
     @Test
     public void findUserByNameAndSexTest() {

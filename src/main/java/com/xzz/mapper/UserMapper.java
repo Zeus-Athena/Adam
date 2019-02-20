@@ -18,6 +18,8 @@ public interface UserMapper {
     //删除user
     void delUser(int id);
 
+    //更改user
+    void updateUser(User user);
     //根据名字和性别查询
     /*
     mybatis对Mapper接口入参的处理:
