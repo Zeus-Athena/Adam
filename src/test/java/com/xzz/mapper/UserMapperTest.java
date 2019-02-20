@@ -56,6 +56,7 @@ public class UserMapperTest {
     public void delUserTest() {
         mapper.delUser(7);
     }
+    //更改user
     @Test
     public void updateUserTest() throws ParseException {
         String birthdayStr = "2008-08-08";
