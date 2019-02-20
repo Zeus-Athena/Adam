@@ -10,6 +10,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Iterator;
+import java.util.List;
 
 public class UserMapperTest {
     private UserMapper mapper = null;
@@ -26,5 +28,14 @@ public class UserMapperTest {
     public void findUSer() {
         User user = mapper.findUserById(1);
         System.out.println(user);
+    }
+
+    @Test
+    public void findAllUser() {
+        List<User> list = mapper.findAllUser();
+        Iterator<User> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
     }
 }
