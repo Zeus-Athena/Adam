@@ -62,4 +62,5 @@ public class UserMapperTest {
         User user = mapper.findUserByNameAndSex("张三","1");
         System.out.println(user);
     }
+    //测试
 }
